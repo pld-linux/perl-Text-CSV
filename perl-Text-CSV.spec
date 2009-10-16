@@ -8,13 +8,13 @@
 Summary:	Text::CSV - comma-separated values manipulator (using XS or PurePerl)
 #Summary(pl.UTF-8):	
 Name:		perl-Text-CSV
-Version:	1.10
+Version:	1.14
 Release:	1
 # same as perl
 License:	GPL v1+ or Artistic
 Group:		Development/Languages/Perl
 Source0:	http://www.cpan.org/modules/by-module/Text/%{pdir}-%{pnam}-%{version}.tar.gz
-# Source0-md5:	ea28c3e4d37125b34c68ce2a03e6315a
+# Source0-md5:	b3090b723e8dbd3f895487cc81b2b3c0
 URL:		http://search.cpan.org/dist/Text-CSV/
 BuildRequires:	perl-devel >= 1:5.8.0
 BuildRequires:	rpm-perlprov >= 4.1-13
