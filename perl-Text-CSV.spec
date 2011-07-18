@@ -6,7 +6,7 @@
 %define	pdir	Text
 %define	pnam	CSV
 Summary:	Text::CSV - comma-separated values manipulator (using XS or PurePerl)
-#Summary(pl.UTF-8):
+Summary(pl.UTF-8):	Text::CSV - obrabianie wartości oddzielonych przecinkami
 Name:		perl-Text-CSV
 Version:	1.21
 Release:	1
@@ -26,8 +26,9 @@ BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 Text::CSV provides facilities for the composition and decomposition of
 comma-separated values using Text::CSV_XS or its pure Perl version.
 
-# %description -l pl.UTF-8
-# TODO
+%description -l pl.UTF-8
+Text::CSV ułatwia składanie i rozkład wartości oddzielanych
+przecinkami przy użyciu Text::CSV_XS lub wersji w czystym Perlu.
 
 %prep
 %setup -q -n %{pdir}-%{pnam}-%{version}
@@ -52,6 +53,7 @@ rm -rf $RPM_BUILD_ROOT
 %files
 %defattr(644,root,root,755)
 %doc Changes
-%{perl_vendorlib}/Text/*.pm
+%{perl_vendorlib}/Text/CSV.pm
+%{perl_vendorlib}/Text/CSV_PP.pm
 %{perl_vendorlib}/Text/CSV
-%{_mandir}/man3/*
+%{_mandir}/man3/Text::CSV*.3pm*
