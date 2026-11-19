@@ -7,13 +7,13 @@
 Summary:	Text::CSV - comma-separated values manipulator (using XS or PurePerl)
 Summary(pl.UTF-8):	Text::CSV - obrabianie wartości oddzielonych przecinkami
 Name:		perl-Text-CSV
-Version:	1.32
-Release:	2
+Version:	2.06
+Release:	1
 # same as perl
 License:	GPL v1+ or Artistic
 Group:		Development/Languages/Perl
 Source0:	http://www.cpan.org/modules/by-module/Text/%{pdir}-%{pnam}-%{version}.tar.gz
-# Source0-md5:	f476205648694a64684be2ab29e44e19
+# Source0-md5:	620284340dfd1787c89666d22adfd463
 URL:		http://search.cpan.org/dist/Text-CSV/
 BuildRequires:	perl-devel >= 1:5.8.0
 BuildRequires:	rpm-perlprov >= 4.1-13
@@ -41,7 +41,6 @@ przecinkami przy użyciu Text::CSV_XS lub wersji w czystym Perlu.
 
 %install
 rm -rf $RPM_BUILD_ROOT
-install -d $RPM_BUILD_ROOT%{perl_vendorlib}/Text/CSV
 
 %{__make} pure_install \
 	DESTDIR=$RPM_BUILD_ROOT
@@ -54,5 +53,4 @@ rm -rf $RPM_BUILD_ROOT
 %doc Changes
 %{perl_vendorlib}/Text/CSV.pm
 %{perl_vendorlib}/Text/CSV_PP.pm
-%{perl_vendorlib}/Text/CSV
 %{_mandir}/man3/Text::CSV*.3pm*
